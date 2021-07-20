@@ -1,0 +1,16 @@
+def Hanoi(start,intm,end,num_dsk):
+ if (num_dsk == 1):
+  print("Move disk from ",start, " to ",end)
+ else:
+  Hanoi(start,end,intm,num_dsk//2)
+  Hanoi(start,intm,end,num_dsk//2 + num_dsk%2)
+  #print("Move disk ", num_dsk, " from ", start, " to ", end)
+  Hanoi(intm,start,end,num_dsk//2)
+
+
+print("Hello!")
+a = 1
+b = 2
+c = 3
+d = 4
+Hanoi(a, b, c, d)
